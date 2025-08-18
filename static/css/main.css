@@ -1,0 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f0f8ff; /* A light AliceBlue color */
+    font-family: sans-serif;
+    margin: 2em;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
