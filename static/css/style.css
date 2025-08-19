@@ -3,33 +3,55 @@ html {
 }
 
 nav {
-  position: sticky;
+  position: fixed;
+  left: 0;
   top: 0;
+  height: 100vh;
+  width: auto;
   background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  box-shadow: 2px 0 4px rgba(255, 255, 255, 0.1);
   z-index: 100;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
 nav a {
-  color: #fff;
+  color: #9b9b9b;
   text-decoration: none;
+  padding: 1rem 0;
+  font-size: 1rem;
+  display: block;
+  text-align: left;
+  white-space: nowrap;
 }
 
 nav a:hover {
-  color: #ccc;
+  color: #fff;
+}
+
+/* All anchor elements */
+a {
+  color: #9b9b9b;
 }
 
 body {
     background-color: #000;
     color: #fff;
-    font-family: sans-serif;
-    margin: 2em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin: 0;
+    display: flex;
 }
 
 .main-container {
-  max-width: 480px; /* The maximum width of your content */
-  margin: 0 auto;   /* This centers the container horizontally */
-  padding: 2rem;    /* Adds some breathing room inside the container */
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 2rem;
+  flex: 1;
 }
 
 h1 {
