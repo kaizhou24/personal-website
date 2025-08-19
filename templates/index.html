@@ -2,17 +2,27 @@
 
 {% block content%}
     <section id="home">
-        <h1>Kai Zhou</h1>
-        <p>CS + Math @ Northwestern</p>
-        <p>👋 Hi, I’m Kai Zhou, studying Computer Science and Mathematics at Northwestern. I love building things and exploring the intersection of CS, math, and finance. My current interests include software engineering, quantitative finance, and technology consulting.</p>
+        <div class="home-container">
+            <div class="left-div">
+                <img 
+                    src="{{ url_for('static', filename='images/profile.png') }}" 
+                    class="profile-picture">
+            </div>
+            <div class="right-div">
+                <div class="home-text">
+                    <h1>Kai Zhou</h1>
+                    <p>CS + Math @ Northwestern</p>
+                    <p>👋 I love building, from the first spark of an idea to shaping it into something real and refining it for impact. My studies in computer science and mathematics help me approach problems with both creativity and precision, and I’m especially interested in applications across SWE, quantitative finance, and technology-driven consulting.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>I’m Kai Zhou, a Northwestern student studying computer science and mathematics. At my core, I’m someone who loves building and experimenting — whether that’s developing software, exploring quantitative models, or working on projects that connect technology and human values.
-My professional interests lie in software engineering, quantitative finance, and management consulting, with a focus on data analytics, artificial intelligence, and risk. These fields let me combine technical rigor with problem-solving at scale.
-Beyond CS and math, I’m fascinated by philosophy — especially ethics, logic, metaphysics, and epistemology. Philosophy shapes how I approach complexity, grounding my work in reasoning and fairness.
-Outside academics, I keep active with running, the gym, and squash. I also enjoy baking, puzzles, and strategy games, which challenge me in different ways and keep my problem-solving skills sharp.</p>
+        <p>I’m Kai Zhou, a student at Northwestern University studying computer science and mathematics. I’m drawn to problems that require both structure and creativity, which is why I focus on the intersection of technology and finance.
+My professional interests include software engineering, quantitative development and trading, and management consulting, with a focus on AI implementation and risk management. I see these fields as opportunities to keep learning while building solutions that matter.
+Outside of academics, I enjoy running, working out, playing squash, and solving puzzles.</p>
     </section>
 
     <section id="projects">
