@@ -7,7 +7,7 @@ projects = [
         'title': 'Personal Website',
         'description': 'A personal portfolio site built with Python and Flask to showcase my projects and skills.',
         'technologies': ['Python', 'Flask', 'HTML', 'CSS'],
-        'github_link': '#' # We will replace '#' with the actual link later
+        'github_link': '#'
     },
     {
         'title': 'Financial Data Analyzer',

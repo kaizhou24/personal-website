@@ -2,13 +2,86 @@ html {
     scroll-behavior: smooth;
 }
 
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #000;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
 body {
-    background-color: #f0f8ff; /* A light AliceBlue color */
+    background-color: #000;
+    color: #fff;
     font-family: sans-serif;
     margin: 2em;
 }
 
+.main-container {
+  max-width: 480px; /* The maximum width of your content */
+  margin: 0 auto;   /* This centers the container horizontally */
+  padding: 2rem;    /* Adds some breathing room inside the container */
+}
+
 h1 {
-    color: #333;
+    color: #fff;
     text-align: center;
+}
+
+h2 {
+    color: #fff;
+}
+
+/* --- Project Section Styles --- */
+.project-container {
+  display: block;
+}
+
+.project-card {
+  background-color: #333333;
+  border: 1px solid #555;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.project-card p {
+  flex-grow: 1;
+  color: #ccc;
+}
+
+/* --- Button Styles within a Project Card --- */
+.project-card .button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #555;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.project-card .button:hover {
+  background-color: #777;
 }
