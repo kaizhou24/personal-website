@@ -1,29 +1,27 @@
 {% extends 'base.html' %}
 
-{% block content%}
+{% block content %}
     <section id="home" class="home">
         <div class="home-container">
-            <div class="left-div">
-                <img 
-                    src="{{ url_for('static', filename='images/profile.png') }}" 
-                    class="profile-picture">
-            </div>
-            <div class="right-div">
-                <div class="home-text">
-                    <p>Hello! My name is</p>
-                    <h1>Kai Zhou</h1>
-                    <p>CS + Math @ Northwestern</p>
-                    <p>
-                        <a href="https://github.com/kaizhou24/personal-website" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        <a href="https://www.linkedin.com/in/kaizhou24/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    </p>
+            <figure class="profile-figure">
+                <img src="{{ url_for('static', filename='images/profile.png') }}" 
+                     alt="Kai Zhou profile picture" 
+                     class="profile-picture">
+            </figure>
+            <div class="intro">
+                <p class="greeting">Hello! My name is</p>
+                <h1>Kai Zhou</h1>
+                <p class="subtitle">CS + Math @ Northwestern</p>
+                <div class="social-links">
+                    <a href="https://github.com/kaizhou24/personal-website" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/kaizhou24/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="about">
-        <h2>About Me</h2>
+        <h2>About</h2>
         <p>Building is my obsession—from the first spark of an idea to the endless pursuit of its refinement. 
             As a rising sophomore at Northwestern University, computer science and mathematics have become my favorite tools for approaching problems with both creativity and precision. 
             I'm especially interested in their applications across software engineering, quantitative finance, technology-driven consulting, and mechanistic interpretability. 
@@ -32,16 +30,15 @@
 
     <section id="projects" class="projects">
         <h2>Projects</h2>
-        <div class="project-container">
-        {% for project in projects %}
-            <div class="project-card">
+        <div class="project-grid">
+            {% for project in projects %}
+            <article class="project-card">
                 <h3>{{ project.title }}</h3>
                 <p>{{ project.description }}</p>
-                <p>Technologies: {{ project.technologies | join(', ') }}</p>
+                <p class="tech-stack">Technologies: {{ project.technologies | join(', ') }}</p>
                 <a href="{{ project.github_link }}" class="button" target="_blank" rel="noopener noreferrer">View Code</a>
-            </div>
-        {% endfor %}
+            </article>
+            {% endfor %}
         </div>
     </section>
-
 {% endblock %}
