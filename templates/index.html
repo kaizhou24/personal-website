@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content%}
-    <section id="home">
+    <section id="home" class="home">
         <div class="home-container">
             <div class="left-div">
                 <img 
@@ -10,9 +10,13 @@
             </div>
             <div class="right-div">
                 <div class="home-text">
+                    <p>Hello! My name is</p>
                     <h1>Kai Zhou</h1>
                     <p>CS + Math @ Northwestern</p>
-                    <p>👋 I love building, from the first spark of an idea to shaping it into something real and refining it for impact. My studies in computer science and mathematics help me approach problems with both creativity and precision, and I’m especially interested in applications across SWE, quantitative finance, and technology-driven consulting.</p>
+                    <p>
+                        <a href="https://github.com/kaizhou24/personal-website" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/kaizhou24/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -20,12 +24,13 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>I’m Kai Zhou, a student at Northwestern University studying computer science and mathematics. I’m drawn to problems that require both structure and creativity, which is why I focus on the intersection of technology and finance.
-My professional interests include software engineering, quantitative development and trading, and management consulting, with a focus on AI implementation and risk management. I see these fields as opportunities to keep learning while building solutions that matter.
-Outside of academics, I enjoy running, working out, playing squash, and solving puzzles.</p>
+        <p>Building is my obsession—from the first spark of an idea to the endless pursuit of its refinement. 
+            As a rising sophomore at Northwestern University, computer science and mathematics have become my favorite tools for approaching problems with both creativity and precision. 
+            I'm especially interested in their applications across software engineering, quantitative finance, technology-driven consulting, and mechanistic interpretability. 
+            You can also find me running, working out, playing squash, and solving puzzles.</p>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="project-container">
         {% for project in projects %}
@@ -38,4 +43,5 @@ Outside of academics, I enjoy running, working out, playing squash, and solving 
         {% endfor %}
         </div>
     </section>
+
 {% endblock %}

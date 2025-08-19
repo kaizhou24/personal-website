@@ -14,9 +14,19 @@
 <body>
     <main class="main-container">
         <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+            </div>
+            <div class="nav-icons">
+                <a href="https://github.com/kaizhou24/personal-website" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ url_for('static', filename='images/github-mark.svg') }}" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/kaizhou24/" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ url_for('static', filename='images/InBug-Black.png') }}" alt="LinkedIn">
+                </a>
+            </div>
         </nav>
 
         {% block content %}{% endblock %}
