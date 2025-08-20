@@ -24,7 +24,7 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 400;
     text-align: left;
     margin-top: -8px;
@@ -133,6 +133,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .intro {
@@ -143,10 +144,71 @@ nav {
 }
 
 .profile-picture {
-    max-height: 194px;
+    max-height: 184px;
     width: auto;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.profile-figure::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 184px;
+    height: 184px;
+    border-radius: 50%;
+    background-image: 
+        radial-gradient(circle at center,
+            transparent 0%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.01) 55%,
+            rgba(255, 255, 255, 0.02) 65%,
+            rgba(255, 255, 255, 0.05) 75%,
+            rgba(255, 255, 255, 0.08) 85%,
+            rgba(255, 255, 255, 0.1) 100%);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.profile-figure::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 184px;
+    height: 184px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    z-index: 2;
+    pointer-events: none;
+    mask: radial-gradient(circle at center,
+           transparent 0%,
+           transparent 45%,
+           rgba(0,0,0,0.1) 50%,
+           rgba(0,0,0,0.3) 55%,
+           rgba(0,0,0,0.6) 65%,
+           rgba(0,0,0,0.85) 75%,
+           black 85%,
+           black 100%);
+    -webkit-mask: radial-gradient(circle at center,
+                  transparent 0%,
+                  transparent 45%,
+                  rgba(0,0,0,0.1) 50%,
+                  rgba(0,0,0,0.3) 55%,
+                  rgba(0,0,0,0.6) 65%,
+                  rgba(0,0,0,0.85) 75%,
+                  black 85%,
+                  black 100%);
 }
 
 .greeting {
