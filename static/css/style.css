@@ -25,17 +25,20 @@ h1, h2 {
 
 h1 {
     font-size: 48px;
+    font-weight: 400;
     text-align: left;
     margin-top: -8px;
 }
 
 h2 {
     padding: 48px 0 12px 0;
+    font-size: 24px;
+    font-weight: 400;
 }
 
 /* Links */
 a {
-    color: #9b9b9b;
+    color: #9e9e9e;
     text-decoration: none;
 }
 
@@ -148,7 +151,7 @@ nav {
 
 .greeting {
     padding: 4px 0;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .subtitle {
@@ -178,18 +181,55 @@ nav {
 
 .project-grid {
     display: block;
+    margin-top: 5px;
 }
 
 .project-card {
-    background-color: #333333;
-    border: 1px solid #555;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
     padding: 1.5rem;
     width: 100%;
     margin-bottom: 2rem;
-    display: flex;
-    flex-direction: column;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.6, 1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.07));
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22),
+                inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.1) 0%, 
+                transparent 50%, 
+                rgba(255, 255, 255, 0.05) 100%);
+    border-radius: 18px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover::before {
+    opacity: 1;
 }
 
 .project-card h3 {
@@ -202,19 +242,3 @@ nav {
     color: #ccc;
 }
 
-.project-card .button {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 10px 20px;
-    background-color: #555;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    align-self: flex-start;
-    transition: background-color 0.3s ease;
-}
-
-.project-card .button:hover {
-    background-color: #777;
-}
