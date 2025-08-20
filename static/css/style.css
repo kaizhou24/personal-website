@@ -115,6 +115,7 @@ nav {
     margin: 0 auto;
     margin-left: calc(50% - 320px + 60px);
     padding: 2rem;
+    padding-top: calc(50vh - 400px);
     flex: 1;
 }
 
