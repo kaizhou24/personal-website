@@ -9,6 +9,12 @@ projects = [
         'technologies': ['Python', 'Flask', 'HTML', 'CSS'],
         'github_link': '#'
     },
+    {
+        'title': "Conway's Game of Life",
+        'description': 'An implementation of Conway\'s Game of Life cellular automaton with interactive controls.',
+        'technologies': ['JavaScript', 'HTML', 'CSS'],
+        'github_link': 'https://kaizhou24.github.io/game-of-life/'
+    },
 ]
 
 @app.route('/')
