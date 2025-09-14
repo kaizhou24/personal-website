@@ -297,12 +297,18 @@ nav {
 
 .project-card h3 {
     margin-top: 0;
+    margin-bottom: 12px;
     color: #fff;
 }
 
 .project-card p {
     flex-grow: 1;
     color: #ccc;
+    font-size: 14px;
+}
+
+.tech-stack {
+    padding-top: 12px;
 }
 
 /* Mobile Responsive Design */

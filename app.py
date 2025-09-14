@@ -4,6 +4,12 @@ app = Flask(__name__)
 
 projects = [
     {
+        'title': 'Portfolio Correlation and Mean-Variance Optimization',
+        'description': 'A portfolio optimization tool uses a Monte Carlo simulation based on Modern Portfolio Theory to analyze historical data and visualize the Efficient Frontier, pinpointing portfolios with the highest risk-adjusted returns.',
+        'technologies': ['Python', 'Pandas' , 'NumPy', 'Matplotlib', 'Seaborn'],
+        'github_link': 'https://github.com/kaizhou24/portfolio-correlation-mvo',
+    },
+    {
         'title': "Conway's Game of Life",
         'description': 'An optimized implementation of Conway\'s Game of Life cellular automaton with interactive controls.',
         'technologies': ['JavaScript', 'HTML', 'CSS'],
